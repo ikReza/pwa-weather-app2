@@ -21,6 +21,13 @@ const InputField = withStyles({
     borderRadius: "15px",
     boxShadow:
       "inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8)",
+    "& label": {
+      color: "tan",
+      fontSize: "16px",
+    },
+    "& label.Mui-focused": {
+      color: "#fed136",
+    },
 
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
@@ -71,6 +78,7 @@ function App() {
           <Box component="div" className="search-bar">
             <InputField
               variant="outlined"
+              label="Search for city"
               placeholder="Search"
               fullWidth
               value={query}
